@@ -1,0 +1,39 @@
+{
+  "name": "darbi_typing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.0.1",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.10.1",
+    "nodemon": "^3.1.4"
+  },
+  "build": {
+    "appId": "com.example.darbi_typing",
+    "mac": {
+    "icon": "../images/logo.jpeg",    
+    "category": "public.app-category.utilities"
+    
+  },
+    "win": {
+      "target": "nsis",
+      "icon": "../images/logo.jpeg"
+    }
+  }
+}
