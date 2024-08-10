@@ -1,0 +1,248 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    overflow: hidden;
+} 
+
+.background-container {
+    background-image: url('../images/background_image.jpeg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #050404;
+    background-attachment: fixed;
+}
+
+.overlay-image {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
+    transform: rotate(-30deg);
+}
+
+.content {
+    position: absolute;
+    top: 20px; /* Adjusted top spacing */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-direction: row; /* Display items in a row */
+    gap: 10px; /* Adjust the gap between items */
+}
+
+.logopic {
+    width: 130px;
+    height: 100px;
+    margin: 0%; /* Remove default margin */
+}
+
+h1 {
+    color: blue;
+    text-shadow: 10%;
+    font-weight: bolder;
+    font-size: 4em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0; /* Remove default margin */
+}
+
+.divContainer {
+    z-index: 2;
+}
+
+.test-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 28%; /* Adjusted top spacing */
+    left: 50%;
+    margin-top: -30px;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 30px;
+    background-color: #6CEBFD;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+.stat {
+    text-align: center;
+    color: black;
+}
+
+.stat h5 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.stat button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.highlightcolor {
+    color: #000;
+    background-color: grey;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.highlightcorrect {
+    color: #000;
+    background-color: green;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.highlightincorrect {
+    color: #000;
+    background-color: red;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.text-test {
+    border-radius: 20px;
+    height: 100px;
+    width: 560px;
+    text-align: center;
+    left: 31%;
+    top: 32%; /* Adjusted top spacing */
+    font-weight: bold;
+    font-size: 20px;
+    z-index: 2;
+    position: fixed;
+    resize: none;
+}
+
+.stats-contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: calc(60% + 50px); /* Adjusted top spacing */
+    left: 48%;
+    transform: translate(-45%, -300%);
+    width: 500px;
+    height: 25px;
+    background-color: #6CEBFD;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+.stats {
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+.textar-test {
+    border-radius: 20px;
+    height: 100px;
+    width: 550px;
+    text-align: center;
+    margin-top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    position: fixed;
+    font-size: 20px;
+    resize: none;
+    top: calc(70% - 120px); /* Adjusted top spacing */
+}
+
+.shiftbutton-test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 580px;
+    gap: 20px;
+    position: fixed;
+    top: calc(73%); /* Adjusted top spacing */
+    left: 3%;
+    z-index: 2;
+}
+
+.shiftbutton-test button {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    width: 120px; /* Fixed width for both buttons */
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #FFA500;
+    height: 40px; /* Fixed height for both buttons */
+    text-align: center; /* Center text horizontally */
+    display: inline-block; /* Ensure inline-block display for proper sizing */
+    white-space: nowrap; /* Prevent wrapping of button text */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline on focus */
+}
+
+.square {
+    position: fixed;
+    margin-top: -190px;
+    top: 72%; /* Adjusted top spacing */
+    left: 82%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 200px;
+    background-color: hsl(187, 97%, 71%);
+    border-radius: 50px;
+    text-align: center;
+    z-index: 2;
+    row-gap: 1%;
+    padding: 20px;
+}
+
+.square h4,
+.square h5,
+.square button {
+    margin: 13px 0;
+}
+
+.help {
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #FFA500;
+    color: black;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.social-icons {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.icon {
+    width: 50px;
+    height: auto;
+    padding: 5px;
+}

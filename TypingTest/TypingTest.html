@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darbi Typing</title>
+    <link rel="stylesheet" href="TypingTest.css">
+</head>
+<body>
+    <div class="background-container">
+        <img src="../images/Typing-bro.png" alt="Overlay Image" class="overlay-image">
+        <div class="content">
+            <img src="../images/logo.png" class="logopic">
+            <h1>DARBI TYPING</h1>
+        </div>
+        <div class="box">
+            <div class="top-buttons">
+                <form id="typingForm" action="/TypingTest" method="POST">
+                    <div class="form-group">
+                        <label for="name"><b>Name: </b></label>
+                        <input type="text" id="name" name="name" placeholder="Type your Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time"><b>Time: </b></label>
+                        <select id="time" name="time" class="form-control" required>
+                            <option value="" disabled selected>Select time</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="test"><b>Test Type: </b></label>
+                        <select id="test" name="test" class="form-control" onchange="populateParagraphs()" required>
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="English">English</option>
+                            <option value="Remington Gail">Remington Gail</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="paragraph"><b>Paragraph: </b></label>
+                        <select id="paragraph" name="paragraph" class="form-control" required>
+                            <option value="" disabled selected>Select a paragraph</option>
+                        </select>
+                    </div>
+                    <div class="typingbutton">
+                        <button type="submit" class="Submit"><b>Submit</b></button>
+                        <button type="button" class="home" onclick="window.location.href='../index.html';"><b>Home</b></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="../images/instagram.png" alt="Instagram" class="icon"></a>
+            <a href="#"><img src="../images/facebook.png" alt="Facebook" class="icon"></a>
+            <a href="#"><img src="../images/whatsapp.png" alt="WhatsApp" class="icon"></a>
+            <a href="#"><img src="../images/linkdin.png" alt="LinkedIn" class="icon"></a>
+            <a href="#"><img src="../images/youtubelogo.png" alt="YouTube" class="icon"></a>
+        </div>
+    </div>
+    <script src="TypingTest.js"></script>
+</body>
+</html>
