@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darbi Typing</title>
+    <link rel="stylesheet" href="EnglishTest.css">
+</head>
+<body>
+    <div class="background-container">
+        <img src="../images/Typing-bro.png" alt="Overlay Image" class="overlay-image">
+        <div class="content">
+            <img src="../images/logo.png" class="logopic">
+            <h1>DARBI TYPING</h1>
+        </div>
+        <div class="divContainer">
+            <div class="test-container">
+                <div class="stat">
+                    <h5 >Elapsed Time</h5>
+                </div>
+                <div class="stat">
+                    <h5><span class="highlightcolor" id="elapsed-time">00:00:00</span></h5>
+                </div>
+                <div class="stat">
+                    <h5>Typed Word</h5>
+                </div>
+                <div class="stat">
+                    <h5><span class="highlightcorrect" id="typed-words">00</span</h5>
+                </div>
+                <div class="stat">
+                    <h5>Correct</h5>
+                </div>
+                <div class="stat">
+                    <h5><span class="highlightcorrect" id="correct-words">00</span></h5>
+                </div>
+                <div class="stat">
+                    <h5>Incorrect</h5>
+                </div>
+                <div class="stat">
+                    <h5><span class="highlightincorrect" id="incorrect-words">00</span></h5>
+                </div>
+                <div class="stat">
+                    <h5>Backspace</h5>
+                </div>
+                <div class="stat">
+                    <h5><span class="highlightincorrect" id="backspace-count">00</span></h5>
+                </div>
+                <div class="stat">
+                    <button onclick="window.location.href='index.html';"><h5>Exit</h5></button>
+                </div>
+            </div>
+            <div>
+                <textarea class="text-test" id="centered-text-areas" readonly></textarea>
+            </div>
+            <div class="stats-contain">
+                <div class="stats">
+                    <h5><span id="accuracy">0%</span> Accuracy</h5>
+                </div>
+                <div class="stats">
+                    <h5><span id="keystrokes">0</span> Keystrokes</h5>
+                </div>
+                <div class="stats">
+                    <h5><span id="wpm">0</span> WPM</h5>
+                </div>
+            </div>
+            <div>
+                <textarea class="textar-test" id="typed-text-areas" readonly></textarea>
+            </div>
+            <div class="shiftbutton-test">
+                <button class="start" onclick="startTest()"><b>Start</b></button>
+                <button class="Submit" onclick="window.location.href='../index.html';"><b>Submit</b></button>
+            </div>
+            <div class="square">
+                <h4><b>WELCOME</b></h4>
+                <h4 style="color: red;" id="userName"><b></b></h4>
+                <h5 id="userTime"><b></b></h5>
+                <h5 id="testType"><b></b></h5>
+                <button class="help" onclick="window.location.href='../index.html';"><b>Help</b></button>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="../images/instagram.png" alt="Instagram" class="icon"></a>
+            <a href="#"><img src="../images/facebook.png" alt="Facebook" class="icon"></a>
+            <a href="#"><img src="../images/whatsapp.png" alt="WhatsApp" class="icon"></a>
+            <a href="#"><img src="../images/linkdin.png" alt="LinkedIn" class="icon"></a>
+            <a href="#"><img src="../images/youtubelogo.png" alt="YouTube" class="icon"></a>
+        </div>
+    </div>
+<script src="EnglishTest.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darbi Typing</title>
+    <link rel="stylesheet" href="Hindi.css">
+</head>
+<body>
+    <div class="background-container">
+        <img src="../images/Typing-bro.png" alt="Overlay Image" class="overlay-image">
+        <div class="content">
+            <img src="../images/logo.png" class="logopic">
+            <h1>DARBI TYPING</h1>
+        </div>
+        <div class="stats-container" >
+            <div class="stat">
+                <h5>Time Taken</h5>
+            </div>
+            <div class="stat">
+                <h5><span class="highlightcolor">00:00:00</span></h5>
+            </div>
+            <div class="stat">
+                <button onclick="reloadPage()"><h5>Reload</h5></button>
+            </div>
+            <div class="stat">
+                <button onclick="window.location.href='../index.html';"><h5>Lessons</h5></button>
+            </div>
+            <div class="stat">
+                <h5>Correct</h5>
+            </div>
+            <div class="stat">
+                <h5><span class="highlightcorrect">00</span></h5>
+            </div>
+            <div class="stat">
+                <h5>Incorrect</h5>
+            </div>
+            <div class="stat">
+                <h5><span class="highlightincorrect">00</span></h5>
+            </div>
+        </div>
+        
+        <div>
+            <textarea class="text" id="centered-text-areas" readonly>एक जंगल में एक हाथी और एक बकरी रहते थे।</textarea>
+        </div>
+        <div>
+            <textarea class="textar krutidev-text" id="user-typed-text" oninput="startTimer()"></textarea>
+        </div>
+        <div class="shiftbuttons">
+            <button class="Submit" onclick="window.location.href='../index.html';"><b>Submit</b></button>
+            <button class="home" onclick="window.location.href='../index.html';"><b>Home</b></button>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="../images/instagram.png" alt="Instagram" class="icon"></a>
+            <a href="#"><img src="../images/facebook.png" alt="Facebook" class="icon"></a>
+            <a href="#"><img src="../images/whatsapp.png" alt="WhatsApp" class="icon"></a>
+            <a href="#"><img src="../images/linkdin.png" alt="LinkedIn" class="icon"></a>
+            <a href="#"><img src="../images/youtubelogo.png" alt="YouTube" class="icon"></a>
+        </div>
+    </div>
+    <script>
+        let timerInterval;
+        let timerStarted = false;
+
+        function startTimer() {
+            if (timerStarted) return;  // Prevent multiple intervals
+            timerStarted = true;
+            
+            let timerDisplay = document.querySelector('.highlightcolor');
+            let startTime = new Date().getTime();
+            
+            timerInterval = setInterval(function() {
+                let currentTime = new Date().getTime();
+                let elapsedTime = currentTime - startTime;
+
+                // Format the elapsed time
+                let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+                let minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+
+                // Update the timer display
+                timerDisplay.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        function reloadPage() {
+            clearInterval(timerInterval);  // Clear the timer interval
+            timerStarted = false;          // Reset the timer started flag
+            document.querySelector('.highlightcolor').textContent = "00:00:00";  // Reset the timer display
+            document.getElementById('user-typed-text').value = "";  // Clear the user input
+        }
+
+        window.addEventListener('beforeunload', function () {
+            clearInterval(timerInterval);  // Clear the interval when the page is unloaded
+        });
+    </script>
+
+</body>
+</html>
